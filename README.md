@@ -10,7 +10,7 @@ Downloads anime from [Gogoanime](https://www.gogoanime.lu).
 * Should have python installed
 * Should have selenium installed 
   * Run command in terminal:
-  * ```python
+    ```python
     pip install selenium
     ```
 * Need to have a [Gogoanime](https://www.gogoanime.lu) account, if not make one.
