@@ -11,9 +11,9 @@ Downloads anime from [Gogoanime](https://www.gogoanime.lu).
 * Should have selenium installed 
   * Run command in terminal:
   * ```python
-  pip install selenium
-  ```
-* Need to have a gogoanime account, if not make one.
+    pip install selenium
+    ```
+* Need to have a [Gogoanime](https://www.gogoanime.lu) account, if not make one.
 * Should have [**wget installed**](https://www.gnu.org/software/wget/)
 
 ## Setting up selenium
