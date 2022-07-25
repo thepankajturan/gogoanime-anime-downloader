@@ -37,7 +37,7 @@ browser = webdriver.Firefox(firefox_profile=firefox_profile)
 
 
 # Installing Addon (Ad Blocker) for faster loading and less congestion on the webpage
-# path_to_extensions loaded from data.json
+# path_to_extensions retrieved from data.json
 browser.install_addon(data["path_to_extensions"])
 
 
