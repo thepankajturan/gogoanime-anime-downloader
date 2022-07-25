@@ -4,13 +4,19 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import subprocess
+from pathlib import Path
+import json
+
+
+# Loading data from data.json
+data = json.loads(Path("data.json").read_text())
 
 
 # INPUTS
 
-# Credentials
-username = input("Enter username or email: ")
-password = input("Enter the password: ")
+# Credentials : retrieveing from data.json file
+username = data["username"]
+password = data["password"]
 
 # Anime info input
 anime_name = input("Enter Anime Name: ")
@@ -31,9 +37,8 @@ browser = webdriver.Firefox(firefox_profile=firefox_profile)
 
 
 # Installing Addon (Ad Blocker) for faster loading and less congestion on the webpage
-
-extensions_dir = "/home/pankaj/development/python-projects/browser_automation/firefox_extensions/ublock_origin-1.43.0.xpi"
-browser.install_addon(extensions_dir)
+# path_to_extensions loaded from data.json
+browser.install_addon(data["path_to_extensions"])
 
 
 browser.get("https://gogoanime.lu/login.html")
